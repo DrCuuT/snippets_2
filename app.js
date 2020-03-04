@@ -49,11 +49,10 @@ $.each(snippets, function (key, value) {
 function changeSelectedLanguage(language) {
 
     document.getElementById("selected_language").innerHTML = "Selected Language : " + language
-    $("snippets_list").empty()
+    $("#snippets_list").empty()
     var search = 'snippets.' + language;
 
     $.each(snippets[language], function (key, val) {
-        console.log(key)
         $("#snippets_list").append('<li><a href="#" id=\'' + key + '\'>' + key + '\</a></li>')
         var currentSnippet = document.getElementById(key)
 
