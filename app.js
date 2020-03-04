@@ -48,13 +48,13 @@ $.each(snippets, function (key, value) {
 
 function changeSelectedLanguage(language) {
     document.getElementById("selected_language").innerHTML = "Selected Language : " + language;
-    //$("snippets_list").empty(); NE FONCTIONNE PAS
+    $("snippets_list").empty();
     var search = 'snippets.'+language;
     console.log(search+"/"+typeof(snippets.Javascript)); //$(search)
     $.each(snippets[language], function (key, val) {
        // console.log("ok");
         console.log(key);
-        $("#snippets_list").append('<li><a href="#">' + key + '</a></li>');
+        $("#snippets_list").append('<li><a href="#", onclick="copySnippet(\'' + val + '\')">' + key + '</a></li>');
         //+rajouter on click à la liste de snippetsqui assigne la val au bouton copy
 
     })
