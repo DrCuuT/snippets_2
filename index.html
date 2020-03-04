@@ -13,30 +13,13 @@
 
 
 <body>
-    <script>
-        $(document).ready(function() {
 
-            $("button").click(function() {
-
-            });
-        });
-    </script>
     <nav>
         <ul>
             <li class="deroulant"><a href="#">Languages</a>
                 <ul id="languages_list" class="sous">
-                    <script>$("#languages_list").append('<li><a href="#">JavaScript</a></li>');</script>
-                    <!--
-                    <li><a href="#" , onclick="changeSelectedLanguage('Javascript')">JavaScript</a></li>
-                    <li><a href="#" , onclick="changeSelectedLanguage('HTML')">HTML</a></li>
-                    <li><a href="#" , onclick="changeSelectedLanguage('CSS')">CSS</a></li>
-                    <li><a href="#" , onclick="changeSelectedLanguage('Python')">Python</a></li>
-                    <li><a href="#" , onclick="changeSelectedLanguage('Java')">Java</a></li>
-                    <li><a href="#" , onclick="changeSelectedLanguage('C/C#/C++')">C/C#/C++</a></li>
-                    <li><a href="#" , onclick="changeSelectedLanguage('Bash')">Bash</a></li>
-                    <li><a href="#" , onclick="changeSelectedLanguage('Ruby')">Ruby</a></li>
-                    <li><a href="#" , onclick="changeSelectedLanguage('Swift')">Swift</a></li>
-                    <li><a href="#" , onclick="changeSelectedLanguage('Typescript')">Typescript</a></li>-->
+                    <!-- exemple de ligne placée :
+                    -->
                 </ul>
             </li>
             <li class="deroulant"><a href="#">Snippets list</a>
@@ -54,7 +37,16 @@
         <script type="text/javascript">
             function changeSelectedLanguage(language) {
                 document.getElementById("selected_language").innerHTML = "Selected Language : " + language;
+                //$("snippets_list").empty(); NE FONCTIONNE PAS
+                var search = "snippets."+language;
+                console.log(search);//$(search)
+                $.each($(search), function(key, val) {
+                    console.out("ok");
+                    //console.log(key);
+                    //$("#snippets_list").append('<li><a href="#">' + key + '</a></li>');
+                    //+rajouter on click à la liste de snippetsqui assigne la val au bouton copy
 
+                })
             }
         </script>
     </div>
