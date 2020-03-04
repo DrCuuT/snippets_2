@@ -49,11 +49,11 @@ $.each(snippets, function (key, value) {
 function changeSelectedLanguage(language) {
     document.getElementById("selected_language").innerHTML = "Selected Language : " + language;
     //$("snippets_list").empty(); NE FONCTIONNE PAS
-    var search = "snippets." + language;
-    console.log(search); //$(search)
-    $.each($(search), function (key, val) {
-        console.log("ok");
-        //console.log(key);
+    var search = 'snippets.'+language;
+    console.log(search+"/"+typeof(snippets.Javascript)); //$(search)
+    $.each(snippets.Javascript, function (key, val) {
+       // console.log("ok");
+        console.log(key);
         //$("#snippets_list").append('<li><a href="#">' + key + '</a></li>');
         //+rajouter on click à la liste de snippetsqui assigne la val au bouton copy
 
