@@ -54,7 +54,7 @@ function changeSelectedLanguage(language) {
 
     $.each(snippets[language], function (key, val) {
         console.log(key)
-        $("#snippets_list").append('<li><a href="#" id=\'' + key + '\'></a></li>')
+        $("#snippets_list").append('<li><a href="#" id=\'' + key + '\'>' + key + '\</a></li>')
         var currentSnippet = document.getElementById(key)
 
         currentSnippet.addEventListener('click', function() {
