@@ -7,14 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="default.css" />
     <script src="app.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
 </head>
 
-<body>
 
+<body>
+    <script>
+        $(document).ready(function() {
+
+            $("button").click(function() {
+                $("#languages_list").append('<li><a href="#">test</a></li>');
+            });
+        });
+    </script>
     <nav>
         <ul>
             <li class="deroulant"><a href="#">Languages</a>
-                <ul class="sous">
+                <ul id="languages_list" class="sous">
+                    <script></script>
+                    <!--
                     <li><a href="#" , onclick="changeSelectedLanguage('Javascript')">JavaScript</a></li>
                     <li><a href="#" , onclick="changeSelectedLanguage('HTML')">HTML</a></li>
                     <li><a href="#" , onclick="changeSelectedLanguage('CSS')">CSS</a></li>
@@ -24,17 +36,18 @@
                     <li><a href="#" , onclick="changeSelectedLanguage('Bash')">Bash</a></li>
                     <li><a href="#" , onclick="changeSelectedLanguage('Ruby')">Ruby</a></li>
                     <li><a href="#" , onclick="changeSelectedLanguage('Swift')">Swift</a></li>
-                    <li><a href="#" , onclick="changeSelectedLanguage('Typescript')">Typescript</a></li>
+                    <li><a href="#" , onclick="changeSelectedLanguage('Typescript')">Typescript</a></li>-->
                 </ul>
             </li>
-             <li class="deroulant"><a href="#">Snippets list</a>
-                    <ul class="sous">
+            <li class="deroulant"><a href="#">Snippets list</a>
+                <ul id="snippets_list" class="sous">
 
 
-                    </ul>
+                </ul>
 
         </ul>
     </nav>
+
     <div>
         <p id="selected_language">Selected Language</p>
 
@@ -43,15 +56,12 @@
                 document.getElementById("selected_language").innerHTML = "Selected Language : " + language;
 
             }
-
         </script>
     </div>
 
-    <footer>
-        <button type="button">Copy</button>
-    </footer>
+    <div>
+        <button id="copy" type="button">Copy</button>
+    </div>
 
 
-</body>
-
-</html>
+</body></html>
