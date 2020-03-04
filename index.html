@@ -17,7 +17,7 @@
         $(document).ready(function() {
 
             $("button").click(function() {
-                $("#languages_list").append('<li><a href="#">test</a></li>');
+
             });
         });
     </script>
@@ -25,7 +25,7 @@
         <ul>
             <li class="deroulant"><a href="#">Languages</a>
                 <ul id="languages_list" class="sous">
-                    <script></script>
+                    <script>$("#languages_list").append('<li><a href="#">JavaScript</a></li>');</script>
                     <!--
                     <li><a href="#" , onclick="changeSelectedLanguage('Javascript')">JavaScript</a></li>
                     <li><a href="#" , onclick="changeSelectedLanguage('HTML')">HTML</a></li>
