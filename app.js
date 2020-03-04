@@ -20,11 +20,6 @@ function copyStringToClipboard(str) {
     document.body.removeChild(el)
 }
 
-button.addEventListener('click', function () {
-    button.innerHTML = "haha"
-    copyStringToClipboard("haha")
-})
-
 var snippets = {
     "Javascript": {
         function: `function test() {
@@ -54,6 +49,7 @@ function changeSelectedLanguage(language) {
 
     $.each(snippets[language], function (key, val) {
         $("#snippets_list").append('<li><a href="#" id=\'' + key + '\'>' + key + '\</a></li>')
+
         var currentSnippet = document.getElementById(key)
 
         currentSnippet.addEventListener('click', function() {
