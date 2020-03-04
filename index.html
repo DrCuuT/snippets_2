@@ -18,7 +18,7 @@
         <ul>
             <li class="deroulant"><a href="#">Languages</a>
                 <ul id="languages_list" class="sous">
-                    <!-- exemple de ligne placée :
+                    <!-- remplissage auto
                     -->
                 </ul>
             </li>
@@ -33,22 +33,6 @@
 
     <div>
         <p id="selected_language">Selected Language</p>
-
-        <script type="text/javascript">
-            function changeSelectedLanguage(language) {
-                document.getElementById("selected_language").innerHTML = "Selected Language : " + language;
-                //$("snippets_list").empty(); NE FONCTIONNE PAS
-                var search = "snippets."+language;
-                console.log(search);//$(search)
-                $.each($(search), function(key, val) {
-                    console.out("ok");
-                    //console.log(key);
-                    //$("#snippets_list").append('<li><a href="#">' + key + '</a></li>');
-                    //+rajouter on click à la liste de snippetsqui assigne la val au bouton copy
-
-                })
-            }
-        </script>
     </div>
 
     <div>
