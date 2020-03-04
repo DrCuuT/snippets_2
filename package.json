@@ -1,0 +1,31 @@
+{
+    "main": "index.html",
+    "name": "Snippets",
+    "description": "Javascript snippets copier application",
+    "version": "0.1.0",
+    "keywords": [
+        "Snippets",
+        "Javascript"
+    ],
+    "window": {
+        "title": "Snippets copier",
+        "icon": "logo.png",
+        "toolbar": false,
+        "frame": true,
+        "width": 900,
+        "height": 500,
+        "position": "center",
+        "resizable": false,
+        "show_in_taskbar": true,
+        "as_desktop": true,
+        "always_on_top": false
+    },
+
+    "webkit": {
+        "plugin": true
+    },
+    "dependencies": {
+        "collections": "^5.1.9",
+        "dedent-js": "^1.0.1"
+    }
+}

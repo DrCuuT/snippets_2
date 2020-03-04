@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="default.css" />
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li class="deroulant"><a href="#">Languages</a>
+                <ul class="sous">
+                    <li><a href="#" , onclick="changeSelectedLanguage('Javascript')">JavaScript</a></li>
+                    <li><a href="#" , onclick="changeSelectedLanguage('HTML')">HTML</a></li>
+                    <li><a href="#" , onclick="changeSelectedLanguage('CSS')">CSS</a></li>
+                    <li><a href="#" , onclick="changeSelectedLanguage('Python')">Python</a></li>
+                    <li><a href="#" , onclick="changeSelectedLanguage('Java')">Java</a></li>
+                    <li><a href="#" , onclick="changeSelectedLanguage('C/C#/C++')">C/C#/C++</a></li>
+                    <li><a href="#" , onclick="changeSelectedLanguage('Bash')">Bash</a></li>
+                    <li><a href="#" , onclick="changeSelectedLanguage('Ruby')">Ruby</a></li>
+                    <li><a href="#" , onclick="changeSelectedLanguage('Swift')">Swift</a></li>
+                    <li><a href="#" , onclick="changeSelectedLanguage('Typescript')">Typescript</a></li>
+                </ul>
+            </li>
+             <li class="deroulant"><a href="#">Snippets list</a>
+                    <ul class="sous">
+
+
+                    </ul>
+
+        </ul>
+    </nav>
+    <div>
+        <p id="selected_language">Selected Language</p>
+
+        <script type="text/javascript">
+            function changeSelectedLanguage(language) {
+                document.getElementById("selected_language").innerHTML = "Selected Language : " + language;
+
+            }
+
+        </script>
+    </div>
+
+    <footer>
+        <button type="button">Copy</button>
+    </footer>
+
+
+</body>
+
+</html>
