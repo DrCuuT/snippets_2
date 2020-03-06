@@ -4,6 +4,10 @@
     text-align: center;
 }
 
+body {
+    background-color: dimgray;
+}
+
 nav {
     width: 100%;
     margin: 0 auto;
@@ -11,18 +15,21 @@ nav {
     position: sticky;
     top: 0px;
     text-align: center;
+    font-family: sans-serif;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
+    border: 1px solid black;
 }
 
 nav ul li {
     flex: 1 1 auto;
     text-align: center;
     position: relative;
-
+    background-color: beige;
+    border-color: black;
 }
 
 
@@ -30,20 +37,12 @@ nav a {
     display: block;
     text-decoration: none;
     color: black;
-    border-bottom: 2px solid transparent;
     padding: 10px 0px;
-
-}
-
-nav a:hover {
-    color: orange;
-    border-bottom: 1px solid gold;
 }
 
 .sous {
     display: none;
     box-shadow: 0px 1px 2px #CCC;
-    background-color: white;
     position: absolute;
     width: 100%;
     z-index: 1000;
@@ -61,13 +60,16 @@ nav > ul li:hover .sous {
 
 .sous a {
     padding: 10px;
-    border-bottom: none;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+
 }
 
 .sous a:hover {
-    border-bottom: none;
-    background-color: RGBa(200, 200, 200, 0.1);
+    background-color: coral;
 }
+
 
 .deroulant > a::after {
     content: " ▼";
