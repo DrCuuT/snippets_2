@@ -165,6 +165,47 @@ var snippets = {
   </div>
 
 </form>`,
+    },
+
+    "CSS": {
+
+        "Fluid Typographie": `html {
+  font-size: 16px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 22px;
+  }
+}`,
+      "Top Shadow" : `body::before {
+  content: "";
+  position: fixed;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
+  z-index: 100;
+}`,
+    },
+
+    "PHP": {
+
+        "Count Execution Time": `$execution_time = microtime(); // Start counting
+
+// Your code
+
+$execution_time = microtime() - $execution_time;
+printf('It took %.5f sec', $execution_time);`,
+
+        "Get Current File Name": `<?php
+    $pageName = basename($_SERVER['PHP_SELF']);
+?>`,
     }
 }
 
