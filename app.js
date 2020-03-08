@@ -1,9 +1,10 @@
-var button = document.getElementById('copy')
-
+/**
+ * Copy a string to clipboard
+ *
+ * @param str {String} the string to be copied
+ */
 function copyStringToClipboard(str) {
-    // Create new element
     var el = document.createElement('textarea')
-    // Set value (string to be copied)
     el.value = str
     // Set non-editable to avoid focus and move outside of view
     el.setAttribute('readonly', '')
@@ -12,21 +13,19 @@ function copyStringToClipboard(str) {
         left: '-9999px'
     }
     document.body.appendChild(el)
-    // Select text inside element
     el.select()
-    // Copy text to clipboard
     document.execCommand('copy')
-    // Remove temporary element
     document.body.removeChild(el)
 }
 
+/**
+ * Multidimensional array containing all snippets
+ *
+ * First dimension : language name
+ * Second dimension : variables containing snippets
+ */
 var snippets = {
     "Javascript": {
-
-        function: `function test() {
-    return("successfull");
-}`,
-        variable: `var test = "successfull";`,
 
         "Copy string to clipboard": `function copyStringToClipboard(str) {
     // Create new element
@@ -166,37 +165,31 @@ var snippets = {
   </div>
 
 </form>`,
-
-        head: `<head></head>`,
-
-        body: `<body>
-    <div></div>
-</body>`
     }
 }
 
-
-
-$.each(snippets, function (key, value) {
-    $("#languages_list").append('<li><a href="#", onclick="changeSelectedLanguage(\'' + key + '\')">' + key + '</a></li>')
-})
-
+/**
+ * Change selected language in app and fill the snippets list with corresponding ones
+ *
+ * @param language {String} new selected language
+ */
 function changeSelectedLanguage(language) {
 
     document.getElementById("selected_language").innerHTML = "Selected Language : " + language
     $("#snippets_list").empty()
-    var search = 'snippets.' + language;
 
+    // fill the snippets list with snippets from selected language
     $.each(snippets[language], function (key, val) {
         $("#snippets_list").append('<li><a href="#" id=\'' + key + '\'>' + key + '\</a></li>')
 
         var currentSnippet = document.getElementById(key)
-
         currentSnippet.addEventListener('click', function() {
-            console.log("copied")
-            document.getElementById("selected_snippet").innerHTML = "Selected Snippet : " + key ;
             copyStringToClipboard(val)
         })
-
     })
 }
+
+// fill the language list with languages from the snippets tab
+$.each(snippets, function (key, value) {
+    $("#languages_list").append('<li><a href="#", onclick="changeSelectedLanguage(\'' + key + '\')">' + key + '</a></li>')
+})

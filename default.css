@@ -70,13 +70,12 @@ nav > ul li:hover .sous {
     background-color: coral;
 }
 
-
 .deroulant > a::after {
     content: " ▼";
     font-size: 12px;
 }
 
-#selected_language, #selected_snippet {
+#selected_language {
     font-size: 17px ;
-    color : coral;
+    color: beige;
 }

@@ -8,17 +8,17 @@
         "Javascript"
     ],
     "window": {
-        "title": "Snippets copier",
+        "title": "Snippets Copier",
         "icon": "logo.png",
         "toolbar": false,
         "frame": true,
         "width": 900,
         "height": 500,
         "position": "center",
-        "resizable": true,
+        "resizable": false,
         "show_in_taskbar": true,
         "as_desktop": true,
-        "always_on_top": false
+        "always_on_top": true
     },
 
     "webkit": {
