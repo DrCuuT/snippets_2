@@ -194,6 +194,7 @@ function changeSelectedLanguage(language) {
 
         currentSnippet.addEventListener('click', function() {
             console.log("copied")
+            document.getElementById("selected_snippet").innerHTML = "Selected Snippet : " + key ;
             copyStringToClipboard(val)
         })
 

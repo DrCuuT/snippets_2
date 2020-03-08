@@ -6,6 +6,7 @@
 
 body {
     background-color: dimgray;
+    font-family: sans-serif;
 }
 
 nav {
@@ -15,7 +16,7 @@ nav {
     position: sticky;
     top: 0px;
     text-align: center;
-    font-family: sans-serif;
+
 }
 
 nav ul {
@@ -26,7 +27,6 @@ nav ul {
 
 nav ul li {
     flex: 1 1 auto;
-    text-align: center;
     position: relative;
     background-color: beige;
     border-color: black;
@@ -41,11 +41,11 @@ nav a {
 }
 
 .sous {
-    display: none;
-    box-shadow: 0px 1px 2px #CCC;
-    position: absolute;
     width: 100%;
     z-index: 1000;
+    position: absolute;
+    display: none;
+    box-shadow: 0px 1px 2px #CCC;
 }
 
 nav > ul li:hover .sous {
@@ -76,6 +76,7 @@ nav > ul li:hover .sous {
     font-size: 12px;
 }
 
-footer {
-    text-align: center;
+#selected_language, #selected_snippet {
+    font-size: 17px ;
+    color : coral;
 }
